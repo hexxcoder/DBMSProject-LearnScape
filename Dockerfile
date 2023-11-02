@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:21-jdk-slim
-COPY --from=build /target/SmartContactManager-0.0.1-SNAPSHOT.jar SmartContactManager.jar
+COPY --from=build /target/Smartcontactmanager-0.0.1-SNAPSHOT.jar Smartcontactmanager.jar
 EXPOSE 8282
-ENTRYPOINT ["java", "-jar", "SmartContactManager.jar"]
+ENTRYPOINT ["java", "-jar", "Smartcontactmanager.jar"]
